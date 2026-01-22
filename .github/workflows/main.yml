@@ -27,7 +27,9 @@ jobs:
         username: ${{ secrets.EC2_USERNAME }}
         key: ${{ secrets.EC2_KEY }}
         port: 22
-        script: whoami
-        script: hostname
-        script: echo "End of SSH script"
+        script: |
+          whoami
+          hostname
+          echo "End of SSH Script on EC2"
+
 
