@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout
 
     - name: Run random commands
-      uses: |
+      run: |
         ls -al
         whoami
         hostname
