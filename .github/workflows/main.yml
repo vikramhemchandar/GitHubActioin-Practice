@@ -1,1 +1,21 @@
+name: My First GitHub Actions pipeline
 
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout the code on runner machine
+      uses: actions/checkout
+
+    - name: Run random commands
+      uses: |
+        ls -al
+        whoami
+        hostname
+        pwd
+        echo "End of the line" 
