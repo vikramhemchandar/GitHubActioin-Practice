@@ -32,4 +32,15 @@ jobs:
           hostname
           echo "End of SSH Script on EC2"
 
-
+    - name: SCP index.html to EC2 instance
+    - uses: actions/checkout@v4
+    - name: Copy files via SSH
+      uses: appleboy/scp-action@v1
+      with:
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ secrets.EC2_USERNAME }}
+        key: ${{ secrets.EC2_KEY }}
+        port: 22
+        source: ./
+        target: /home/ubuntu
+        script: ls -al
