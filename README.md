@@ -1,7 +1,7 @@
 # GitHubActioin-Practice
 A practical session on How to create a GitHub Actions pipeline and how go connect with EC2 instance. 
 
-Here, I have writeen a simple index.html file and I will execute this on an Amazon EC2 instance.
+Here, I have written a simple index.html file and I will execute this on an Amazon EC2 instance.
 
 ### Steps to follow
 - Create an EC2 instance with SSH, HTTP and HTTPS ports enabled
