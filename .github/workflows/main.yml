@@ -7,15 +7,15 @@ on:
 
 jobs:
   deploy:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout the code on runner machine
-      uses: actions/checkout
+    runs-on: ubuntu-latest
+      steps:
+      - name: Checkout the code on runner machine
+        uses: actions/checkout
 
-    - name: Run random commands
-      uses: |
-        ls -al
-        whoami
-        hostname
-        pwd
-        echo "End of the line" 
+      - name: Run random commands
+        uses: |
+          ls -al
+          whoami
+          hostname
+          pwd
+          echo "End of the line" 
