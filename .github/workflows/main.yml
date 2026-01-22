@@ -28,3 +28,6 @@ jobs:
         key: ${{ secrets.EC2_KEY }}
         port: 22
         script: whoami
+        script: hostname
+        script: echo "End of SSH script"
+
