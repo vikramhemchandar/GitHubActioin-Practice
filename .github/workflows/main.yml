@@ -33,9 +33,7 @@ jobs:
           echo "End of SSH Script on EC2"
 
     - name: SCP index.html to EC2 instance
-    - uses: actions/checkout@v4
-    - name: Copy files via SSH
-      uses: appleboy/scp-action@v1
+      uses: actions/checkout@v4
       with:
         host: ${{ secrets.EC2_HOST }}
         username: ${{ secrets.EC2_USERNAME }}
