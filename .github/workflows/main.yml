@@ -41,4 +41,13 @@ jobs:
         port: 22
         source: ./
         target: /home/ubuntu
-        script: ls -al
+
+    - name: Copy the files to nginx folder
+      uses: appleboy/ssh-action@v1
+      with:
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ secrets.EC2_USERNAME }}
+        key: ${{ secrets.EC2_KEY }}
+        port: 22
+        script: |
+          sudo cp /home/ubuntu/* /var/www/html
